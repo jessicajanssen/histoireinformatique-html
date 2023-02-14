@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>La grande histoire de l'informatique</title>
+    <!-- balises meta -->
+    <meta name="author" content="JJ">
+    <meta name="generator" content="phpstorm">
+    <meta name="description" content="page sur l'histoire de l'informatique">
+    <meta name="keywords" content="informatique, histoire, evolution, langage, numerique">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Gère le responsive web -->
+    <meta content="width=device-width,height=device-height,user-scalable=yes,initial-scale=1.0" name="viewport">
+    <!-- Ajout d'une favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <!-- Javascript en externe -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/gestionCookies.js"></script>
+    <!-- Style css en externe -->
+    <link type="text/css" rel="stylesheet" media="all" href="assets/css/style.css">
+</head>
+<body>
+<a name="lk_header"></a>
+<main>
+    <div id="divcookies">
+        <!-- demande autorisation utilisation cookies -->
+        <p id="pcookies">Acceptez-vous les cookies?
+            <a href="#" id="cookieYes">oui, j'accepte.</a>
+            <a href="#" id="cookieNo">non, je n'accepte pas.</a>
+        </p>
+    </div>
+    <header id="entete">
+        <h1 id="logo" class="element"><a href="index.html">Histoire de l'informatique</a></h1>
+        <!-- Menu principal -->
+        <nav id="navigation">
+            <ul>
+                <li><a href="#" title="vers l'histoire">Histoire</a></li>
+                <li><a href="aufildesans.html" title="vers au fil des ans">Au fil des ans</a></li>
+                <li><a href="evolution.html" title="vers l'évolution">Evolution</a></li>
+                <li><a href="aujourdhui.html" title="vers le monde numérique">Aujourd'hui</a></li>
+                <li><a href="demain.html" title="vers demain">Demain</a></li>
+                <li><a href="modelisation.html" title="vers gestion informatique">Gestion Informatique</a></li>
+                <li><a href="timeline.html" title="vers la ligne du temps">Timeline</a></li>
+                <li><a href="galerie.html" title="vers la galerie">Galerie</a></li>
+                <li><a href="contact.html" title="vers le formulaire">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Section Histoire de l'informatique -->
+    <section id="histoire">
+        <h2 class="titrearticle">De l'algorithme à la notion de programme</h2>
+        <article>
+            <div class="conteneurSingle">
+                <div class="itemText">
+                    <p>
+                    Le développement de l'informatique est en réalité fortement lié à la recherche fondamentale en mathématiques et plus particulièrement
+                        à la logique et aux algorithmes apparus au 9ème siècle grâce à <a href="http://fr.wikipedia.org/wiki/Al-Khwârizmî" title="Biographie de Al Khwarizmi">Al Khwarizmi.</a>
+                        C'est aussi à lui que l'on doit les chiffres arabes.
+                    L'algorithmique est la science de l'organisation des opérations à effectuer. C'est la réalisation d'un opération abstraite comme par
+                    exemple l'addition de deux nombres. Pour passer à une opération concrète, il faut écrire tout cela de façon bien plus précise sous
+                    la forme d'un programme, écrit dans un langage de programmation.
+                        Le calcul binaire est apparu en Europe vers 1697, grâce aux travaux de <a href="http://fr.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz" title="Biographie de Leibniz">Leibniz.</a>
+                        C'est à partir de ce calcul binaire que seront
+                    également développés les premiers ordinateurs.
+                    </p>
+                </div>
+            </div>
+            <div class="conteneurMulti">
+                <div class="itemImgText">
+                    <p>
+                    <a href="http://fr.wikipedia.org/wiki/Ada_Lovelace" title="Biographie de Ada Lovelace">Ada Lovelace</a> , mathématicienne du 19ème siècle,
+                    a publié ses recherches en 1840, sous un nom masculin. Elle a fortement contribué à la création du premier ordinateur appelé la machine
+                    analytique par Charles Babbage. La machine analytique avait pour but d'exécuter tout ce que les hommes lui demanderaient d'effectuer :
+                    opérations numériques et symboliques.
+                        <a href="http://fr.wikipedia.org/wiki/Charles_Babbage" title="Biographie de Charles Babbage">Charles Babbage</a> est considéré comme le grand-père des ordinateurs. Il n'a jamais terminé la machine analytique, car la Couronne britannique
+                    lui a retiré son soutien financier à cause de la longueur des recherches. Mais grâce à ses plans, son fils a été capable de la finir.
+                    Elle est aujourd'hui au Musée de la Science de Londres et elle fonctionne toujours !
+                    </p>
+                </div>
+                <div class="itemImgText">
+                    <img src="assets/img/AnalyticMachineBabbage.jpg" alt="photo de la machine analytique" title="La machine analytique de Charles Babbage" width="372" height="400" class="image">
+                </div>
+            </div>
+        </article>
+    </section>
+ <!-- ******************************    FOOTER    ****************************** -->
+    <footer id="footer">
+        <div id="society" class="elementfooter">
+            &copy;Jessica Janssen 2021. All Rights Reserved</div>
+        <div id="rgpd" class="elementfooter"><a href="https://www.autoriteprotectiondonnees.be/citoyen/declaration-de-protection-des-donnees-en-bref" target="_blank" title="Protection des données">Déclaration de protection des données</a></div>
+        <div id="compatibilite" class="elementfooter">
+            <img src="assets/img/firefox.png" alt="logo navigateur firefox" title="Compatibilité firefox">
+            <img src="assets/img/chrome.png" alt="logo navigateur chrome" title="Compatibilité chrome">
+            <img src="assets/img/opera.png" alt="logo navigateur opera" title="Compatibilité opera">
+            <img src="assets/img/safari.png" alt="logo navigateur safari" title="Compatibilité safari">
+        </div>
+    </footer>
+</main>
+</body>
+
+<script>
+// événement sur les liens du div cookies avec JQuery
+$('#cookieYes').on("click",function(){
+fct_Gcookie('oui');
+});
+$('#cookieNo').on("click",function(){
+fct_Gcookie('non');
+});
+</script>
+</html>

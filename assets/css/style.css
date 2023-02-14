@@ -1,0 +1,475 @@
+/* Style Css par défaut de la page L'histoire de l'informatique*/
+
+
+/************************* polices personnalisées ************************/
+/*************************************************************************/
+@font-face {
+    font-family: 'Halant';
+    src: url('../fonts/Halant/Halant-Regular.ttf');
+            url('../fonts/Halant/Halant-Bold.ttf');
+}
+@font-face {
+    font-family: 'Nunito_Sans';
+    src: url('../fonts/Nunito_Sans/NunitoSans-Regular.ttf');
+            url('../fonts/Nunito_Sans/NunitoSans-Bold.ttf');
+}
+
+/************************* Les cookies ************************/
+/**************************************************************/
+div#divcookies {
+    position:fixed;
+    bottom:0px;
+    display:block;
+    background-color: #e20b48;
+    color:white;
+    width:100%;
+    height:40px;
+}
+#pcookies{
+    margin: 5px 0px 0px 5px;
+}
+
+
+/************************* Les élèments généraux de la page ************************/
+/***********************************************************************************/
+html {
+    background: #fff url("../img/background_wave4.png") no-repeat local left top;
+    /* garde a barre de défilement de la page html visible en y */
+    overflow-y: scroll;
+    height: 100%;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding: 0;
+}
+
+main {
+    /* Permet de garder le footer bas de page */
+    position: relative;
+    min-height: 100%;
+    font-family: 'Nunito_Sans', serif;
+    font-size: 1em;
+    margin: 0 auto;
+
+}
+
+header{
+    color: #00a2d2;
+    background-color: rgba(255, 255, 255, 1);
+    display:flex;
+    /* autoriser les élèments à revenir à la ligne lorsque l'on réduit la fenêtre */
+    flex-wrap: wrap;
+    /* alignement sur l'axe principal : horizontal ds mon cas */
+    justify-content: space-between;
+    /* alignement sur l'axe secondaire : vertical */
+    align-items: baseline;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+footer{
+    color: #00a2d2;
+    background-color: rgba(255, 255, 255, 1);
+    display:flex;
+    /* autoriser les élèments à revenir à la ligne lorsque l'on réduit la fenêtre */
+    flex-wrap: wrap;
+    /* alignement sur l'axe principal : horizontal ds mon cas */
+    justify-content: space-between;
+    /* alignement sur l'axe secondaire : vertical */
+    align-items: baseline;
+    width: 100%;
+    box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.45);
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-transform: uppercase;
+    padding-right: 20px;
+}
+
+section {
+
+    padding: 20px 150px 20px 150px;
+    margin: 10px 0 10px 0;
+}
+/* conteneur multi box text/image */
+.conteneurMulti{
+    display:flex;
+    /* row aligne les élèments horizontalement et column verticalement */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* justify-content permet d'aligner le contenu horizontalement et align-items le contenu verticalement*/
+    justify-content: flex-start;
+    align-items: center;
+    margin: 40px 0px;
+    padding: 20px;
+}
+.itemImgText{
+
+    margin: 20px;
+    width: 50%;
+}
+
+.conteneurMultiDr{
+    display:flex;
+    /* row aligne les élèments horizontalement et column verticalement */
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    /* justify-content permet d'aligner le contenu horizontalement et align-items le contenu verticalement*/
+    justify-content: flex-end;
+    /*align-items: center;*/
+    margin: 40px 0px;
+    padding: 20px;
+    text-align: right;
+}
+
+/* conteneur single box text */
+.conteneurSingle{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 40px 0px;
+    padding: 20px;
+
+}
+.conteneurTimeline{
+    display:flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 180px;
+    padding: 60px 20px;
+
+}
+.itemText{
+    margin: 20px;
+}
+
+article{
+    margin: 90px 0px;
+}
+
+/* conteneur multi box text/image */
+.conteneurMultiPhoto{
+    display:flex;
+    /* row aligne les élèments horizontalement et column verticalement */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* justify-content permet d'aligner le contenu horizontalement et align-items le contenu verticalement*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    /*margin: 40px 0px;
+    padding: 20px;*/
+}
+
+
+/************************* Les header et le menu de navigation ************************/
+/**************************************************************************************/
+
+#logo {
+    padding: 10px;
+    text-align: left;
+}
+
+/* permet de faire grossir l'élèment logo pour occuper tout l'espace restant, et ainsi être positionné à gauche */
+.element:nth-child(2){
+    flex: 1;
+}
+
+#navigation {
+    padding-right: 20px;
+}
+#navigation li {
+    color: #00a2d2;
+    padding: 10px;
+    margin-right: 5px;
+}
+#navigation li a {
+    color: #00a2d2;
+    line-height: 1em;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+#navigation li a:hover, #navigation li a:focus {
+    text-decoration: none;
+    transition: 0.8s;
+    color: black;
+    border-bottom: 1px solid black;
+}
+#navigation li a:active {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+
+/************************* Les sections ************************/
+/***************************************************************/
+/* le texte dans la page */
+
+
+p {
+    text-align: left;
+    /* permet de définir la hauteur de chaque ligne d'un texte et donc l'espace entre les lignes */
+    line-height: 110%;
+    font-size: 1.1em;
+}
+p.multicol2{
+    column-count: 2;
+    column-rule: 1px dotted #00a2d2;
+    column-gap: 30px;
+}
+/* Lettrine pour les paragraphes */
+p:first-of-type:first-letter{
+    font-size: 1.3em;
+    color: #ffb106;
+}
+h2.titrearticle{
+    color: #0d4257;
+}
+/* Les images */
+.image{
+    max-width: 400px;
+    height : auto;
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6)
+}
+.image2{
+    max-width: 600px;
+    height : auto;
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6)
+}
+.image3{
+    max-width: 800px;
+    height : auto;
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6)
+}
+.imageTimeline{
+    max-width: 1024px;
+    height : auto;
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6)
+}
+
+
+/************************* Les hyperliens ************************/
+/*****************************************************************/
+a:link {
+    text-decoration: none;
+    color: #ffb106;
+}
+a:visited {
+    text-decoration: none;
+    color: #00a2d2;
+}
+a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: #144c72;
+    transition: 0.4s;
+}
+
+/************************* les titres ************************/
+/************************************************************/
+h1 {
+    font: bold 1.8em Halant, Serif;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+h2 {
+    font: bold 1.4em Halant, Serif;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+h3 {
+    font: bold 1.2em Halant, Serif;
+    text-align: start;
+}
+
+/************************* le formulaire ********************/
+/************************************************************/
+form {
+    width: 800px;
+    padding: 30px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+fieldset {
+    border: none;
+    margin: 20px 0;
+}
+.label {
+    color: #00a2d2;
+    text-align: left;
+    font-size: medium;
+    width: 20%;
+    /* permet d'aligner les input text*/
+    display: inline-block;
+    margin-bottom: 10px;
+
+}
+input{
+    width: 50%;
+    background: #f0f0f0;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    margin: 5px 0px;
+    font: normal 1em Nunito_Sans, Serif;
+}
+select
+{
+    width: 52.5%;
+    background: #f0f0f0;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    margin: 5px 0px;
+    font: normal 1em Nunito_Sans, Serif;
+}
+/* Change la couleur des input placeholder */
+input::placeholder {
+    color: #000000;
+}
+
+label.rgbdCheck {
+    color: #000000;
+    font-size: small;
+    margin-right: 0;
+}
+input[type="checkbox"]{
+    width: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+input[type="submit"], input[type="reset"]{
+    background: #00a2d2;
+    color: #f0f0f0;
+    padding: 10px;
+    margin: 4px 2px;
+    border: none;
+    width :100px;
+    cursor: pointer;
+    font: normal 1em Nunito_Sans, Serif;
+    text-transform: uppercase;
+}
+
+.span-form{
+    color: #00a2d2;
+    padding: 10px;
+    font: normal 1em Nunito_Sans, Serif;
+}
+
+/************************* le carrousel **********************/
+/************************************************************/
+article.conteneurDiapo {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cadre-diapo{
+    max-width:500px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.diapo {
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    top: 50%;
+    transition: opacity 1s;
+    width: 100%;
+    max-width: 500px;
+    max-height:400px;
+}
+figcaption.figcaptionDiapo{
+    background-color: #f0f0f0;
+    width: 500px;
+    margin-top: -6px;
+    font-size: 1.1em;
+}
+
+button{
+    border: none;
+    cursor: pointer
+}
+
+.precedent,
+.suivant{
+    color: silver;
+    transition: color .4s linear;
+    transform: translatey(-50%);
+    top: 50%;
+    padding: .5rem;
+    font-size: 2rem;
+    background: white;
+    position: absolute
+}
+/* alignement des fleche navigation precedent et suivant */
+.precedent{left:36%}
+.suivant{right:31%}
+
+.precedent:hover,
+.suivant:hover{
+    color: black
+}
+.numeros{
+    transition: background .4s linear;
+    color: white;
+    background: #00a2d2;
+}
+.cadre-demo{
+    bottom: 10%;
+    margin-left: 40%;
+    margin-right: auto;
+    position: absolute;
+}
+
+/************************* le footer ************************/
+/************************************************************/
+#footer {
+    /* position absolute et bottom 0 permet de garder le footer en bas de page si celle-ci ne contient pas bcp de texte */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding-top: 5px;
+}
+#society {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+#rgpd {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+#compatibilite {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+#compatibilite img{
+    border: none;
+    padding-right: 10px;
+}
+/* permet de centrer les éléments en horizontal et en vertical */
+.elementfooter{
+    margin: auto;
+}
+.elementfooter img{
+    box-shadow: none;
+}
